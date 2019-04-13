@@ -46,6 +46,17 @@ export const actions = {
         */
         await axios.get(state.apiurl + 'cockpit/api/singletons/get/' + slug + token)
             .then(({data})=>commit('pushSingle', {data}))
+    },
+
+    async saveUser({state, dispatch}, user){
+        await axios.post(state.apiurl + 'cockpit/api/cockpit/saveUser' + token, {
+            user: {
+                user: "test",
+                name: "Testing User",
+                email: "testing@test.ffftest",
+                active: "true"
+            }
+          })
     }
 }
 

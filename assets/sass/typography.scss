@@ -1,0 +1,130 @@
+@import '~/assets/sass/breakpoints.scss';
+@import '~/assets/sass/color.scss';
+
+@font-face{
+    font-family: 'Space Grotesk';
+    font-weight: normal;
+    src: url('~/static/fonts/SpaceGrotesk-Regular.otf');
+}
+
+@font-face{
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+    src: url('~/static/fonts/SpaceGrotesk-Light.otf');
+}
+
+@font-face{
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    src: url('~/static/fonts/SpaceGrotesk-Medium.otf');
+}
+
+@font-face{
+    font-family: 'Space Grotesk';
+    font-weight: 600;
+    src: url('~/static/fonts/SpaceGrotesk-SemiBold.otf');
+}
+
+@font-face{
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    src: url('~/static/fonts/SpaceGrotesk-Bold.otf');
+}
+
+/*default*/
+
+body{
+    font-family: 'Space Grotesk';
+}
+
+/*reset*/
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    span.p{
+        display: block;
+    }
+}
+
+p {
+
+}
+
+p, ul, ol{
+    &:first-child{
+        margin-top: 0;
+    }
+}
+
+p, ul, ol{
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+section.intro li {
+    margin-bottom: 0.8rem;
+}
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    color: $yellow;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+
+
+/*sizing*/
+
+.s1{
+    font-size: 162px;
+    line-height: 158px;
+}
+
+.s2{
+    font-size: 62px;
+    line-height: 74px;
+
+    @include media('<=medium'){
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+.s3{
+    font-size: 42px;
+}
+
+.s4{
+    font-size: 26px;
+    line-height: 1.6;
+    @include media('<medium'){
+        font-size: 22px;
+        line-height: 1.6;
+    }
+}
+
+.s5{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*weight*/
+
+.bold{
+    font-weight: 500;
+}
+
+.italic{
+    font-style: italic;
+}

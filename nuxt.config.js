@@ -1,10 +1,7 @@
 module.exports = {
     head:{
-        meta: [
-            { hid: 'og:image', property: 'og:image', content: 'http://172.104.208.23/splash.png' },
-            { hid: 'og:image:alt', property: 'og:image:alt', content: 'Transmission: the missing link in your clean energy future.' },
-            { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-            { hid: 'google-site-verification', name: 'google-site-verification', content: '0wqjDtYtCenl-Z1eeYXzOgF9nHYYThAL9SwIpEx3lyQ' }
+        script: [
+            { src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAU10I9mMMpANx1Q98_-q3Pas6hwzr37D0", body: true },
         ],
         link: [
             {

@@ -8,7 +8,6 @@
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.3.1",
-        "@nuxtjs/google-analytics": "^2.0.2",
         "gsap": "^2.0.1",
         "nuxt": "^1.4.2",
         "vue-meta": "^1.5.0"
@@ -20,7 +19,7 @@
     },
     "config": {
         "nuxt": {
-            "port": "3333"
+            "port": "3000"
         }
     }
 }

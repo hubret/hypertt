@@ -1,0 +1,20 @@
+#spotlight{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    input{
+        max-width: 800px;
+        width: 100%;
+        height: 75px;
+        padding: 40px;
+        font-size: 28px;
+        outline: 0;
+        background: $grey;
+        border: 0;
+        color: #fff;
+    }
+}
