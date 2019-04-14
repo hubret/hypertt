@@ -15,9 +15,6 @@
     import gmap from '~/components/gmap.vue';
     
     export default {
-//        async fetch ({store, params}) {
-//            await store.dispatch('cpCollection', 'events')
-//        },
         components: {
             leaderboard,
             gmap

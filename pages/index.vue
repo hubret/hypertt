@@ -61,9 +61,6 @@
     import foot from '~/components/foot.vue';
 
     export default {
-        //        async fetch ({store, params}) {
-        //            await store.dispatch('cpCollection', 'events')
-        //        },
         components: {
             foot
         },

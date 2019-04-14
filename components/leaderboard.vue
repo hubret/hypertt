@@ -13,7 +13,7 @@
                     Tracker Score
                 </th>
             </tr>
-            <tr v-for="(p, i) in lb">
+            <tr v-for="(p, i) in lb" :key="'record'+i">
                 <td>
                     {{i+1}}
                 </td>

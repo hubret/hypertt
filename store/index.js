@@ -3,11 +3,16 @@ import axios from 'axios';
 const token = '?token=e5df434f6f6874a1647d16b5d1aaac'
 
 export const state = () => ({
-    //variables
+    //config
     apiurl: 'http://data.hypertt.cloud/',
-     //cockpit
-     singles: [],
-     collections: [],
+    //cockpit
+    singles: [],
+    collections: [],
+    //variables
+    route_locations: {
+        a: null,
+        b: null
+    }
 })
 
 export const actions = {
@@ -47,28 +52,23 @@ export const actions = {
         await axios.get(state.apiurl + 'cockpit/api/singletons/get/' + slug + token)
             .then(({data})=>commit('pushSingle', {data}))
     },
-
-    async saveUser({state, dispatch}, user){
-        await axios.post(state.apiurl + 'cockpit/api/cockpit/saveUser' + token, {
-            user: {
-                user: "test",
-                name: "Testing User",
-                email: "testing@test.ffftest",
-                active: "true"
-            }
-          })
+    saveRoute({state, commit}, payload){
+        console.log('saveRoute dispatched')
+        commit('setRoute', payload)
     }
 }
 
 export const mutations = {
     pushSingle: (state, ob) => { state.singles.push(ob.data) },
     pushCollection: (state, obj) => { state.collections.push(obj) },
+    setRoute: (state, obj ) => { state.route_locations[obj.point] = obj.location }
 } 
 
 export const getters = {
     getSingle: state => slug => state.singles.filter(s => s.slug == slug)[0],
     getCollection: state => slug => state.collections.filter(c => c.slug == slug)[0],
     apiurl: state => state.apiurl,
+    getRoute: state => state.route_locations,
 }
 
 

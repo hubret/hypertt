@@ -1,0 +1,8 @@
+.titles{
+    >div{
+        padding: 25px;
+        &:hover{
+            background: $lightgrey;
+        }
+    }
+}
